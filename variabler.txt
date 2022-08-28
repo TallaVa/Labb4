@@ -1,0 +1,17 @@
+Variabler i PHP-scriptet:
+Attributet name="" i HTML-filen:
+
+I följande ordning:
+
+payment  
+fname      
+ename    
+address      
+zip-code
+city           
+cell         
+mail       
+password 
+offers
+mail-format
+comments
