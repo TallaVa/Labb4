@@ -1,43 +1,168 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>DTD-HTML5</title>
-<style type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DTD-HTML5</title>
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+        color: #000000;
+      }
 
-body {
-background-color:#FFFFFF;
-color:#000000;    
-}
+      .clearfix {
+        clear: both;
+      }
+      body {
+        background-color: beige;
+        align-content: right;
+      }
 
-.clearfix {
-clear:both;
-}
-</style>
-</head>
-<body>
+      select {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-family: cursive, sans-serif;
+        outline: 0;
+        background: #2ecc71;
+        color: #fff;
+        border: 1px solid crimson;
+        padding: 4px;
+        border-radius: 9px;
+      }
+      fieldset {
+        width: 400px;
+      }
+      legend {
+        font-style: italic;
+        font-size: x-large;
+      }
+      input {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-family: cursive, sans-serif;
+        outline: 0;
+        background: #2ecc71;
+        color: #fff;
+        border: 1px solid crimson;
+        padding: 4px;
+        border-radius: 9px;
+        width: 300px;
+      }
+      .zip-code {
+        width: 100px;
+      }
+      .city {
+        width: 180px;
+      }
+      p {
+        font-style: italic;
+      }
+      .checkbox {
+        width: min-content;
+      }
+      .button {
+        width: 213px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <fieldset>
+          <legend>Registrera medlemsuppgifter</legend>
+          <br /><br />
+          <label for="payment"></label>
+          <select name="payment" id="payment">
+            <option value="null">Välj betalsätt</option>
+            <option value="kreditkcity">Kreditkcity</option>
+            <option value="faktura">Faktura</option>
+          </select>
+          <br /><br />
+          <label for="fname">Förnamn:</label><br />
+          <input type="text" id="fnamn" required />*<br /><br />
+          <label for="enamn">Efternamn:</label><br />
+          <input type="text" name="enamn" id="enamn" required />*<br /><br />
+          <label for="adress">Adress:</label><br />
+          <input type="text" name="adress" id="adress" required />*<br /><br />
+          <label for="pcitynr">Postnr.</label>
+          <label for="city">och ort</label><br />
+          <input
+            class="zip-code"
+            type="text"
+            name="zip-code"
+            id="zip-code"
+            required
+          />*
+          <input
+            class="city"
+            type="text"
+            name="city"
+            id="city"
+            required
+          />*<br /><br />
+          <label for="cell">Mobil:</label><br />
+          <input type="tel" name="cell" id="cell" required />*<br /><br />
+          <label for="mail">Epost:</label><br />
+          <input type="email" name="mail" id="mail" required />*<br /><br />
+          <label for="password">Lösenord:</label><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+          />*<br /><br />
+        </fieldset>
+        <p>* Obligatorisk uppgift</p>
 
-Your code goes here...
+        <fieldset>
+          <label for="offers">Erbjudanden via e-post</label>
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="offers"
+            id="offers"
+          /><br />
+          <label for="mail-format">E-postformat </label>
+          <input
+            class="checkbox"
+            type="radio"
+            name="HTML"
+            id="mail-format"
+          />HTML
+          <input
+            class="checkbox"
+            type="radio"
+            name="text"
+            id="mail-format"
+          />Text <br /><br />
+        </fieldset>
+        <br />
 
-
-
-<!-- W3C logos for valid HTML5 and CSS3 -->
-<div class="clearfix"></div>
-<div>
-<p>
-<a href="http://validator.w3.org/check?uri=referer"><img
-src="http://www.w3.org/html/logo/downloads/HTML5_Logo_64.png"
-alt="Valid HTML5" height="50" width="50"
-style="border:0;" /></a>
-</p>
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
-<img style="border:0;width:88px;height:31px"
-src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-alt="Valid CSS!" />
-</a>
-</p>
-</div>
-
-</body>
+        <input class="button" type="submit" value="Submit" />
+        <input class="button" type="reset" value="Reset" />
+      </form>
+    </div>
+    <!-- W3C logos for valid HTML5 and CSS3 -->
+    <div class="clearfix"></div>
+    <div>
+      <p>
+        <a href="http://validator.w3.org/check?uri=referer"
+          ><img
+            src="http://www.w3.org/html/logo/downloads/HTML5_Logo_64.png"
+            alt="Valid HTML5"
+            height="50"
+            width="50"
+            style="border: 0"
+        /></a>
+      </p>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+    </div>
+  </body>
 </html>
