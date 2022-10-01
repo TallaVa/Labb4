@@ -14,7 +14,6 @@
       }
       body {
         background-color: beige;
-        align-content: right;
       }
 
       select {
@@ -24,7 +23,6 @@
         outline: 0;
         background: #2ecc71;
         color: #fff;
-        border: 1px solid crimson;
         padding: 4px;
         border-radius: 9px;
       }
@@ -42,7 +40,6 @@
         outline: 0;
         background: #2ecc71;
         color: #fff;
-        border: 1px solid crimson;
         padding: 4px;
         border-radius: 9px;
         width: 300px;
@@ -66,39 +63,27 @@
   </head>
   <body>
     <div>
-      <form>
+      <form name="Medlemsuppgifter" action="forms-labb.php" method="post">
         <fieldset>
           <legend>Registrera medlemsuppgifter</legend>
           <br /><br />
           <label for="payment"></label>
-          <select name="payment" id="payment">
+          <select name="payment" name="payment">
             <option value="null">Välj betalsätt</option>
-            <option value="kreditkcity">Kreditkcity</option>
+            <option value="kreditkcity">Kreditkort</option>
             <option value="faktura">Faktura</option>
           </select>
           <br /><br />
           <label for="fname">Förnamn:</label><br />
-          <input type="text" id="fnamn" required />*<br /><br />
-          <label for="enamn">Efternamn:</label><br />
-          <input type="text" name="enamn" id="enamn" required />*<br /><br />
-          <label for="adress">Adress:</label><br />
-          <input type="text" name="adress" id="adress" required />*<br /><br />
-          <label for="pcitynr">Postnr.</label>
+          <input type="text" name="fname" id="fname" required />*<br /><br />
+          <label for="ename">Efternamn:</label><br />
+          <input type="text" name="ename" id="ename" required />*<br /><br />
+          <label for="address">Address:</label><br />
+          <input type="text" name="address" id="adress" required />*<br /><br />
+          <label for="zip-code">Postnr.</label>
           <label for="city">och ort</label><br />
-          <input
-            class="zip-code"
-            type="text"
-            name="zip-code"
-            id="zip-code"
-            required
-          />*
-          <input
-            class="city"
-            type="text"
-            name="city"
-            id="city"
-            required
-          />*<br /><br />
+          <input class="zip-code" type="text" name="zip-code" required />*
+          <input class="city" type="text" name="city" required />*<br /><br />
           <label for="cell">Mobil:</label><br />
           <input type="tel" name="cell" id="cell" required />*<br /><br />
           <label for="mail">Epost:</label><br />
@@ -115,25 +100,37 @@
 
         <fieldset>
           <label for="offers">Erbjudanden via e-post</label>
+          <input type="hidden" name="offers" id="offers" value="NEJ" />
           <input
             class="checkbox"
             type="checkbox"
             name="offers"
             id="offers"
+            value="JA"
           /><br />
           <label for="mail-format">E-postformat </label>
           <input
             class="checkbox"
             type="radio"
-            name="HTML"
+            name="mail-format"
             id="mail-format"
+            value="HTML"
           />HTML
           <input
             class="checkbox"
             type="radio"
-            name="text"
+            name="mail-format"
             id="mail-format"
+            value="Text"
           />Text <br /><br />
+
+          <label for="comments">Kommentar:</label><br />
+          <input
+            type="text"
+            name="comments"
+            id="comments"
+            style="height: 50px"
+          />
         </fieldset>
         <br />
 
@@ -141,18 +138,27 @@
         <input class="button" type="reset" value="Reset" />
       </form>
     </div>
-    <!-- W3C logos for valid HTML5 and CSS3 -->
+    <!-- W3C logos for valname HTML5 and CSS3 -->
     <div class="clearfix"></div>
     <div>
       <p>
-        <a href="http://validator.w3.org/check?uri=referer"
+        <a href="http://valnameator.w3.org/check?uri=referer"
           ><img
             src="http://www.w3.org/html/logo/downloads/HTML5_Logo_64.png"
-            alt="Valid HTML5"
+            alt="Valname HTML5"
             height="50"
             width="50"
             style="border: 0"
         /></a>
+      </p>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!"
+          />
+        </a>
       </p>
       <p>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
