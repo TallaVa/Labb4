@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>DTD-HTML5</title>
-    <style type="text/css">
+    <style>
       body {
         background-color: #ffffff;
         color: #000000;
@@ -66,48 +66,63 @@
       <form name="Medlemsuppgifter" action="forms-labb.php" method="post">
         <fieldset>
           <legend>Registrera medlemsuppgifter</legend>
-          <br /><br />
+          <br><br>
           <label for="payment"></label>
-          <select name="payment" name="payment">
+          <select name="payment" id="payment">
             <option value="null">Välj betalsätt</option>
-            <option value="kreditkcity">Kreditkort</option>
+            <option value="kreditkort">Kreditkort</option>
             <option value="faktura">Faktura</option>
           </select>
-          <br /><br />
-          <label for="fname">Förnamn:</label><br />
-          <input type="text" name="fname" id="fname" required />*<br /><br />
-          <label for="ename">Efternamn:</label><br />
-          <input type="text" name="ename" id="ename" required />*<br /><br />
-          <label for="address">Address:</label><br />
-          <input type="text" name="address" id="adress" required />*<br /><br />
+          <br><br>
+          <label for="fname">Förnamn:</label><br>
+          <input type="text" name="fname" id="fname" required >*<br><br>
+          <label for="ename">Efternamn:</label><br>
+          <input type="text" name="ename" id="ename" required >*<br><br>
+          <label for="address">Address:</label><br>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            required >*<br><br>
           <label for="zip-code">Postnr.</label>
-          <label for="city">och ort</label><br />
-          <input class="zip-code" type="text" name="zip-code" required />*
-          <input class="city" type="text" name="city" required />*<br /><br />
-          <label for="cell">Mobil:</label><br />
-          <input type="tel" name="cell" id="cell" required />*<br /><br />
-          <label for="mail">Epost:</label><br />
-          <input type="email" name="mail" id="mail" required />*<br /><br />
-          <label for="password">Lösenord:</label><br />
+          <label for="city">och ort</label><br>
+          <input
+            class="zip-code"
+            type="text"
+            name="zip-code"
+            id="zip-code"
+            required >* 
+          <input
+            class="city"
+            type="text"
+            name="city"
+            id="city"
+            required
+          >*<br><br>
+          <label for="cell">Mobil:</label><br>
+          <input type="tel" name="cell" id="cell" required >*<br><br>
+          <label for="mail">Epost:</label><br>
+          <input type="email" name="mail" id="mail" required >*<br><br>
+          <label for="password">Lösenord:</label><br>
           <input
             type="password"
             name="password"
             id="password"
             required
-          />*<br /><br />
+          >*<br><br>
         </fieldset>
         <p>* Obligatorisk uppgift</p>
 
         <fieldset>
           <label for="offers">Erbjudanden via e-post</label>
-          <input type="hidden" name="offers" id="offers" value="NEJ" />
+          <input type="hidden" name="offers" value="NEJ">
           <input
             class="checkbox"
             type="checkbox"
             name="offers"
             id="offers"
             value="JA"
-          /><br />
+            ><br>
           <label for="mail-format">E-postformat </label>
           <input
             class="checkbox"
@@ -115,27 +130,26 @@
             name="mail-format"
             id="mail-format"
             value="HTML"
-          />HTML
+          >HTML
           <input
             class="checkbox"
             type="radio"
             name="mail-format"
-            id="mail-format"
             value="Text"
-          />Text <br /><br />
+          >Text <br><br>
 
-          <label for="comments">Kommentar:</label><br />
+          <label for="comments">Kommentar:</label><br>
           <input
             type="text"
             name="comments"
             id="comments"
             style="height: 50px"
-          />
+          >
         </fieldset>
-        <br />
+        <br>
 
-        <input class="button" type="submit" value="Submit" />
-        <input class="button" type="reset" value="Reset" />
+        <input class="button" type="submit" value="Submit">
+        <input class="button" type="reset" value="Reset">
       </form>
     </div>
     <!-- W3C logos for valname HTML5 and CSS3 -->
@@ -149,26 +163,23 @@
             height="50"
             width="50"
             style="border: 0"
-        /></a>
+        ></a>
       </p>
       <p>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
-          <img
-            style="border: 0; width: 88px; height: 31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!"
-          />
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!">
         </a>
-      </p>
+    </p>
       <p>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
-          <img
-            style="border: 0; width: 88px; height: 31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!"
-          />
-        </a>
-      </p>
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!">
+            </a>
+        </p>
+              
     </div>
   </body>
 </html>
